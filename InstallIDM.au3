@@ -40,7 +40,7 @@ EndFunc
 
 ; Function to open file dialog and select the IDM installer
 Func SelectInstaller()
-    Local $path = FileOpenDialog("Select IDM Installer", "C:\", "Executable Files (*.exe)", 1)
+    Local $path = FileOpenDialog("Select IDM Installer", @WorkingDir & "\", "Executable Files (*.exe)", 1)
     If @error Then
         MsgBox(0, "No File Selected", "No installer file was selected. Exiting.")
         Return ""
